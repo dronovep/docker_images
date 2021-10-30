@@ -1,0 +1,10 @@
+docker run -d -p 5432:5432 --name pgsql --rm \
+-v /home/nerevarino/.local/mdocker_pgsql/socket/:/var/run/postgresql/ \
+-v pgsql:/var/lib/postgresql/data \
+-e POSTGRES_PASSWORD=pgsql424258541 \
+pgsql
+
+docker run -it --rm \
+-v /home/nerevarino/.local/mdocker_pgsql/socket/:/var/run/postgresql/ \
+-v /home/nerevarino/PhpstormProjects/docker_images/php8/context/test.php:/test.php \
+mphp8-cli /bin/sh
