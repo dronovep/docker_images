@@ -3,7 +3,7 @@
 $connection = null;
 
 $connection = new PDO(
-    'pgsql:dbname=postgres;host=/var/run/postgresql/',
+    'pgsql:dbname=postgres;host=pgsql.mdocker;port=5432',
     'postgres',
     'pgsql424258541'
 );
